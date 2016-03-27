@@ -7,21 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAE6EC281CA87A3200E077A0 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6EC271CA87A3200E077A0 /* SignUpController.swift */; };
 		DAE7D0DF1CA5B7CE00151279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7D0DE1CA5B7CE00151279 /* AppDelegate.swift */; };
-		DAE7D0E11CA5B7CE00151279 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7D0E01CA5B7CE00151279 /* ViewController.swift */; };
 		DAE7D0E41CA5B7CE00151279 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D0E21CA5B7CE00151279 /* Main.storyboard */; };
 		DAE7D0E61CA5B7CE00151279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D0E51CA5B7CE00151279 /* Assets.xcassets */; };
 		DAE7D0E91CA5B7CE00151279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D0E71CA5B7CE00151279 /* LaunchScreen.storyboard */; };
+		DAE7D0F81CA70E8500151279 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE7D0F71CA70E8500151279 /* FBSDKCoreKit.framework */; };
+		DAE7D0FA1CA70E9500151279 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE7D0F91CA70E9500151279 /* FBSDKLoginKit.framework */; };
+		DAE7D0FE1CA7FFDB00151279 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7D0FD1CA7FFDB00151279 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAE6EC271CA87A3200E077A0 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		DAE7D0DB1CA5B7CD00151279 /* joynem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joynem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE7D0DE1CA5B7CE00151279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAE7D0E01CA5B7CE00151279 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAE7D0E31CA5B7CE00151279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAE7D0E51CA5B7CE00151279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAE7D0E81CA5B7CE00151279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE7D0EA1CA5B7CE00151279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAE7D0F61CA70AC500151279 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		DAE7D0F71CA70E8500151279 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DAE7D0F91CA70E9500151279 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		DAE7D0FD1CA7FFDB00151279 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAE7D0FA1CA70E9500151279 /* FBSDKLoginKit.framework in Frameworks */,
+				DAE7D0F81CA70E8500151279 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +63,26 @@
 		DAE7D0DD1CA5B7CE00151279 /* joynem */ = {
 			isa = PBXGroup;
 			children = (
+				DAE7D0F11CA5E2BD00151279 /* Frameworks */,
 				DAE7D0DE1CA5B7CE00151279 /* AppDelegate.swift */,
-				DAE7D0E01CA5B7CE00151279 /* ViewController.swift */,
+				DAE7D0FD1CA7FFDB00151279 /* ViewController.swift */,
 				DAE7D0E21CA5B7CE00151279 /* Main.storyboard */,
 				DAE7D0E51CA5B7CE00151279 /* Assets.xcassets */,
 				DAE7D0E71CA5B7CE00151279 /* LaunchScreen.storyboard */,
 				DAE7D0EA1CA5B7CE00151279 /* Info.plist */,
+				DAE7D0F61CA70AC500151279 /* Bridging-Header.h */,
+				DAE6EC271CA87A3200E077A0 /* SignUpController.swift */,
 			);
 			path = joynem;
+			sourceTree = "<group>";
+		};
+		DAE7D0F11CA5E2BD00151279 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAE7D0F91CA70E9500151279 /* FBSDKLoginKit.framework */,
+				DAE7D0F71CA70E8500151279 /* FBSDKCoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAE7D0E11CA5B7CE00151279 /* ViewController.swift in Sources */,
+				DAE7D0FE1CA7FFDB00151279 /* ViewController.swift in Sources */,
 				DAE7D0DF1CA5B7CE00151279 /* AppDelegate.swift in Sources */,
+				DAE6EC281CA87A3200E077A0 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +272,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/stefaniemknapp/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/joynem",
+				);
 				INFOPLIST_FILE = joynem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefanieknapp.joynem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "joynem/Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -261,10 +291,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/stefaniemknapp/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/joynem",
+				);
 				INFOPLIST_FILE = joynem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefanieknapp.joynem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "joynem/Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -287,6 +325,7 @@
 				DAE7D0EF1CA5B7CE00151279 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
