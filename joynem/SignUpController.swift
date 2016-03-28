@@ -10,6 +10,14 @@ import UIKit
 
 class SignUpController: UIViewController {
 
+    @IBOutlet var CreateButton: UIButton!
+    @IBOutlet var BDayTextField: UITextField!
+    @IBOutlet var BDayDatePicker: UIDatePicker!
+    
+    @IBOutlet var MaleBtn: DownStateButton?
+    @IBOutlet var FemaleBtn: DownStateButton?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

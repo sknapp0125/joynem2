@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DAE6EC281CA87A3200E077A0 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6EC271CA87A3200E077A0 /* SignUpController.swift */; };
+		DAE6EC2A1CA90BE900E077A0 /* joynemLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6EC291CA90BE900E077A0 /* joynemLibrary.swift */; };
 		DAE7D0DF1CA5B7CE00151279 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7D0DE1CA5B7CE00151279 /* AppDelegate.swift */; };
 		DAE7D0E41CA5B7CE00151279 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D0E21CA5B7CE00151279 /* Main.storyboard */; };
 		DAE7D0E61CA5B7CE00151279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D0E51CA5B7CE00151279 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		DAE6EC271CA87A3200E077A0 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		DAE6EC291CA90BE900E077A0 /* joynemLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = joynemLibrary.swift; sourceTree = "<group>"; };
 		DAE7D0DB1CA5B7CD00151279 /* joynem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = joynem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAE7D0DE1CA5B7CE00151279 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DAE7D0E31CA5B7CE00151279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				DAE7D0EA1CA5B7CE00151279 /* Info.plist */,
 				DAE7D0F61CA70AC500151279 /* Bridging-Header.h */,
 				DAE6EC271CA87A3200E077A0 /* SignUpController.swift */,
+				DAE6EC291CA90BE900E077A0 /* joynemLibrary.swift */,
 			);
 			path = joynem;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAE7D0FE1CA7FFDB00151279 /* ViewController.swift in Sources */,
+				DAE6EC2A1CA90BE900E077A0 /* joynemLibrary.swift in Sources */,
 				DAE7D0DF1CA5B7CE00151279 /* AppDelegate.swift in Sources */,
 				DAE6EC281CA87A3200E077A0 /* SignUpController.swift in Sources */,
 			);

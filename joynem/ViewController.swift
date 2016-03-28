@@ -11,14 +11,12 @@ import UIKit
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     @IBOutlet var Login: UIButton!
-    
     @IBOutlet var SignUp: UIButton!
-    
-    @IBOutlet var FacebookButton: FBSDKLoginButton!
-    
     
     @IBOutlet var username: UITextField!
     @IBOutlet var password: UITextField!
+    
+    @IBOutlet var FacebookButton: FBSDKLoginButton!
     
     
     //Facebook Login Methods
