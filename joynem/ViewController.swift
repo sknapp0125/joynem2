@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
@@ -17,6 +18,16 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet var password: UITextField!
     
     @IBOutlet var FacebookButton: FBSDKLoginButton!
+    
+    @IBAction func signUp(sender: AnyObject) {
+        
+        if username.text == "" || password.text == "" {
+            
+        }
+    }
+    
+    @IBAction func login(sender: AnyObject) {
+    }
     
     
     //Facebook Login Methods
@@ -56,7 +67,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             }
         })
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -70,13 +81,18 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
         }
+        
+        let testObject = PFObject (className: "Test Object")
+        testObject["foo"] = "bar"
+        testObject.saveInBackgroundWithBlock {(success, error) -> Void in
+            print ("Object has been saved")
+        }
+        
+        func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-
