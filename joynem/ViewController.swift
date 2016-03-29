@@ -11,6 +11,8 @@ import Parse
 
 class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    var signupActive = true
+    
     @IBOutlet var Login: UIButton!
     @IBOutlet var SignUp: UIButton!
     
@@ -20,13 +22,78 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet var FacebookButton: FBSDKLoginButton!
     
     @IBAction func signUp(sender: AnyObject) {
-        
-        if username.text == "" || password.text == "" {
-            
-        }
+    }
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: {(action)-> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })))
+        self.presentViewController(alert, animated: true, completion: nil)
+
     }
     
     @IBAction func login(sender: AnyObject) {
+        
+        if username.text == "" || password.text == "" {
+            displayAlert("Error in form", message: "Please enter a username and password")
+            
+        } else {
+            
+            activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
+            activityIndicator.center = self.view.center
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+            view.addSubview(activityIndicator)
+            activityIndicator.startAnimating()
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            
+            var errorMessage = "Please try agan later"
+            
+            if signupActive == true {
+            
+            let user = PFUser()
+            user.username = username.text
+            user.password = password.text
+                
+            user.signUpInBackgroundWithBlock({ (success, error) in
+                
+                self.activityIndicator.stopAnimating()
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                
+                if error == nil {
+                    
+                    //Login successful
+                    
+                } else {
+                    
+                    if let errorString = error!.userInfo["error"] as? String {
+                        
+                        errorMessage = errorString
+                    }
+                    self.displayAlert("Failed Login", message: errorMessage)
+                }
+            })
+            } else {
+                PFUser.logInWithUsernameInBackground(username.text!, password: password.text!, block: { (user, error) -> Void in
+                    
+                    self.activityIndicator.stopAnimating()
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
+                    
+                    if user != nil {
+                        //Logged in!
+                    } else {
+                        if let errorString = error!.userInfo["error"] as? String {
+                            
+                            errorMessage = errorString
+                        }
+                        self.displayAlert("Failed SignUp", message: errorMessage)
+                    }
+                })
+            }
+        }
     }
     
     
@@ -93,6 +160,7 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             // Dispose of any resources that can be recreated.
         }
         
+        override func 
         
     }
 }
