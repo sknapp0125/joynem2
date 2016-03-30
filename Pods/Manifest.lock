@@ -1,0 +1,23 @@
+PODS:
+  - Koloda (2.0.10):
+    - pop (~> 1.0)
+  - pop (1.0.9)
+
+DEPENDENCIES:
+  - Koloda (~> 2.0.10)
+  - pop (from `https://github.com/facebook/pop.git`)
+
+EXTERNAL SOURCES:
+  pop:
+    :git: https://github.com/facebook/pop.git
+
+CHECKOUT OPTIONS:
+  pop:
+    :commit: 79d0a9708ac60a635adf7b5aec56e6206d61a3e1
+    :git: https://github.com/facebook/pop.git
+
+SPEC CHECKSUMS:
+  Koloda: 10f747feeff5e425061f78e5ce17208783e34a99
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+
+COCOAPODS: 0.39.0
