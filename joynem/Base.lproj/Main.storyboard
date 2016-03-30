@@ -53,7 +53,7 @@
                                             <constraint firstAttribute="width" constant="520" id="cde-Ck-tOP"/>
                                         </constraints>
                                     </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-LE-qd7">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dic-LE-qd7">
                                         <rect key="frame" x="40" y="339" width="480" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="hwl-8f-Cix"/>
@@ -83,7 +83,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ahK-iQ-wPY"/>
+                                            <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oaq-9x-2gO"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqj-pt-gW3">
@@ -116,7 +116,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fIn-Wh-UGq"/>
+                                            <segue destination="QrF-1K-X5e" kind="presentation" id="aQ9-KD-VgG"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -142,11 +142,8 @@
                     </view>
                     <connections>
                         <outlet property="FacebookButton" destination="t7o-hU-koB" id="wh6-db-Rec"/>
-                        <outlet property="Login" destination="0Fo-MB-GBP" id="QtF-Eh-771"/>
-                        <outlet property="SignUp" destination="soQ-px-s3Z" id="mcU-dR-3MY"/>
-                        <outlet property="password" destination="Jaa-qG-cJS" id="T4y-mt-fv0"/>
-                        <outlet property="username" destination="Dic-LE-qd7" id="mOa-IN-8ZK"/>
-                        <segue destination="QrF-1K-X5e" kind="presentation" id="5IA-fl-lCY"/>
+                        <outlet property="txtEmail" destination="Dic-LE-qd7" id="eZX-SI-dqz"/>
+                        <outlet property="txtPassword" destination="Jaa-qG-cJS" id="HsY-2o-x0g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -175,6 +172,9 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="createTapped:" destination="QrF-1K-X5e" eventType="touchUpInside" id="k2b-u5-mxV"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="obx-nz-seV" userLabel="CreateStack">
                                 <rect key="frame" x="40" y="30" width="520" height="470"/>
@@ -398,6 +398,11 @@
                         <outlet property="BDayTextField" destination="NXv-gP-2fz" id="MlQ-ac-Fog"/>
                         <outlet property="FemaleBtn" destination="bdU-ZA-KxJ" id="0rv-fu-17D"/>
                         <outlet property="MaleBtn" destination="F6g-kj-OSE" id="xcL-kr-G0e"/>
+                        <outlet property="confirmPasswordtxt" destination="Go4-oD-3yW" id="xTH-sG-Idm"/>
+                        <outlet property="emailtxt" destination="KFo-dw-mQN" id="aCU-Lw-3T6"/>
+                        <outlet property="firstNametxt" destination="eIP-Ze-bRJ" id="0HA-qX-n8Y"/>
+                        <outlet property="lastNametxt" destination="vTA-vV-q5f" id="ULY-DI-dan"/>
+                        <outlet property="passwordtxt" destination="MEA-B5-25H" id="s6J-qI-LaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQw-UJ-YK6" userLabel="First Responder" sceneMemberID="firstResponder"/>
