@@ -9,131 +9,78 @@
 import UIKit
 import Parse
 
-class ViewController: UIViewController, FBSDKLoginButtonDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
     
-    //User Login
-    @IBOutlet var txtEmail: UITextField!
-    @IBOutlet var txtPassword: UITextField!
+    @IBOutlet var username: UITextField!
     
-    @IBAction func loginTapped(sender: UIButton) {
-        //Authentication Code
-        let email:NSString = txtEmail.text!
-        let password:NSString = txtPassword.text!
+    @IBOutlet var password: UITextField!
+    
+    @IBOutlet var signupButton: UIButton!
+    
+    @IBOutlet var loginButton: UIButton!
+    
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    var errorMessage = "Please try again later"
+    
+    func displayAlert(title: String, message: String) {
         
-        if ( email.isEqualToString("") || password.isEqualToString("") ) {
-            let alertView:UIAlertView = UIAlertView()
-            alertView.title = "Sign In Failed"
-            alertView.message = "Please enter your email and password"
-            alertView.delegate = self
-            alertView.addButtonWithTitle("OK")
-            alertView.show()
+        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+        })))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func login(sender: AnyObject) {
+        
+        if username.text == "" || password.text == "" {
+            
+            displayAlert("Error in Form", message: "Please enter your username and password")
+            
         } else {
-            do {
-                let post:NSString = "email=\(email)&password=\(password)"
+            
+            activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
+            activityIndicator.center = self.view.center
+            activityIndicator.hidesWhenStopped = true
+            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+            view.addSubview(activityIndicator)
+            activityIndicator.startAnimating()
+            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+            
+            var user = PFUser()
+            user.username = username.text
+            user.password = password.text
+            
+            
+            PFUser.logInWithUsernameInBackground(self.username.text!, password: self.password.text!, block: { (user, error) -> Void in
                 
-                NSLog("PostData %@", post);
+                self.activityIndicator.stopAnimating()
+                UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
-                let url:NSURL = NSURL(string: "https://joynem.herokuapp.com/parse")!
-                
-                let postData:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
-                
-                let postLength:NSString = String( postData.length )
-                
-                let request:NSMutableURLRequest = NSMutableURLRequest(URL: url)
-                request.HTTPMethod = "POST"
-                request.HTTPBody = postData
-                request.setValue(postLength as String, forHTTPHeaderField: "Content-Length")
-                request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-                request.setValue("application/json", forHTTPHeaderField: "Accept")
-                
-                var responseError: NSError?
-                var response: NSURLResponse?
-                var urlData: NSData?
-                
-                do {
-                    urlData = try NSURLConnection.sendSynchronousRequest(request, returningResponse:&response)
-                } catch let error as NSError {
-                    responseError = error
-                    urlData = nil
-                }
-                if ( urlData != nil) {
-                    let res = response as! NSHTTPURLResponse!;
+                if user != nil {
+                    //Logged in
                     
-                    NSLog("Response code: %ld", res.statusCode);
+                    print((user!.email)!)
                     
-                    if (res.statusCode >= 200 && res.statusCode < 300) {
-                        
-                        let responseData:NSString = NSString(data: urlData!, encoding: NSUTF8StringEncoding)!
-                        
-                        NSLog("Response ==> %ld", responseData);
-                        
-                        //var error: NSError?
-                        
-                        let jsonData:NSDictionary = try NSJSONSerialization.JSONObjectWithData(urlData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                        
-                        let success:NSInteger = jsonData.valueForKey("success") as! NSInteger
-                        
-                        //[jsonData[@"success"] integerValue];
-                        
-                        NSLog("Success: %ld", success);
-                        
-                        if (success == 1) {
-                            NSLog("Login SUCCESS");
-                            
-                            let prefs:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-                            prefs.setObject(email, forKey: "EMAIL")
-                            prefs.setInteger(1, forKey: "ISLOGGEDIN")
-                            prefs.synchronize()
-                            
-                            self.dismissViewControllerAnimated(true, completion: nil)
-                        } else {
-                            var error_msg:NSString
-                            
-                            if jsonData["error_message"] as? NSString != nil {
-                                error_msg = jsonData["error_message"] as! NSString
-                            } else {
-                                error_msg = "Unknown Error"
-                            }
-                            let alertView:UIAlertView = UIAlertView()
-                            alertView.title = "Sign In Failed"
-                            alertView.message = error_msg as String
-                            alertView.delegate = self
-                            alertView.addButtonWithTitle("OK")
-                            alertView.show()
-                        }
-                    } else {
-                        let alertView:UIAlertView = UIAlertView()
-                        alertView.title = "Sign In Failed"
-                        alertView.message = "Connection Failed"
-                        alertView.delegate = self
-                        alertView.addButtonWithTitle("OK")
-                        alertView.show()
-                    }
                 } else {
-                    let alertView:UIAlertView = UIAlertView()
-                    alertView.title = "Sign In Failed"
-                    alertView.message = "Connection Failed"
-                    if let error = responseError {
-                        alertView.message = (error.localizedDescription)
+                    
+                    if let errorString = error!.userInfo["error"] as? String {
+                        
+                        self.errorMessage = errorString
                     }
-                    alertView.delegate = self
-                    alertView.addButtonWithTitle("OK")
-                    alertView.show()
+                    
+                    self.displayAlert("Failed Sign Up", message: self.errorMessage)
                 }
-            } catch {
-                let alertView:UIAlertView = UIAlertView()
-                alertView.title = "Sign In Failed"
-                alertView.message = "Server Error"
-                alertView.delegate = self
-                alertView.addButtonWithTitle("OK")
-                alertView.show()
-            }
+            })
         }
     }
     
-    
     //Facebook Login
-    @IBOutlet var FacebookButton: FBSDKLoginButton!
+    //@IBOutlet var FacebookButton: FBSDKLoginButton!
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print ("User logged in")
@@ -176,6 +123,11 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //Attach text fields to UITextFieldDelegate for hiding the keyboard
+        self.username.delegate = self
+        self.password.delegate = self
+        
+        
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             //User is already logged in, do work such as go to the next ViewController
         } else {
@@ -196,5 +148,15 @@ class ViewController: UIViewController, FBSDKLoginButtonDelegate {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
         }
+    }
+    
+    //HIDE KEYBOARD
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

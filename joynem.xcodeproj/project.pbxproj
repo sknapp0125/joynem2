@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		576656C2336D6BADA4853EAC /* Pods_joynem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D5F8DBB6D36516770D8B1A /* Pods_joynem.framework */; };
+		DA1341A51CAD1A1C00CC6356 /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A41CAD1A1C00CC6356 /* ProfilePictureViewController.swift */; };
+		DA1341A71CAD1C5000CC6356 /* WelcomeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A61CAD1C5000CC6356 /* WelcomeSceneViewController.swift */; };
+		DA1341AA1CAD1F6000CC6356 /* GroupTypeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A91CAD1F6000CC6356 /* GroupTypeSelectViewController.swift */; };
+		DA1341AC1CAD1F9300CC6356 /* CountrySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341AB1CAD1F9300CC6356 /* CountrySelectViewController.swift */; };
+		DA1341AE1CAD207C00CC6356 /* ProfileDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341AD1CAD207C00CC6356 /* ProfileDescriptionViewController.swift */; };
+		DA1341B01CAD20EE00CC6356 /* FriendSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341AF1CAD20EE00CC6356 /* FriendSearchViewController.swift */; };
+		DA1341B21CAD225200CC6356 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341B11CAD225200CC6356 /* UserProfileViewController.swift */; };
+		DA1341B61CAD23CE00CC6356 /* SwipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341B51CAD23CE00CC6356 /* SwipesViewController.swift */; };
 		DAE6EC281CA87A3200E077A0 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6EC271CA87A3200E077A0 /* SignUpController.swift */; };
 		DAE6EC2A1CA90BE900E077A0 /* joynemLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE6EC291CA90BE900E077A0 /* joynemLibrary.swift */; };
 		DAE6EC301CA9593F00E077A0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE6EC2F1CA9593F00E077A0 /* Bolts.framework */; };
 		DAE6EC321CA9597F00E077A0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE6EC311CA9597F00E077A0 /* Parse.framework */; };
-		DAE6EC341CA9598700E077A0 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE6EC331CA9598700E077A0 /* ParseFacebookUtils.framework */; };
 		DAE6EC381CA9599A00E077A0 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE6EC351CA9599A00E077A0 /* ParseFacebookUtilsV4.framework */; };
 		DAE6EC391CA9599A00E077A0 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE6EC361CA9599A00E077A0 /* ParseTwitterUtils.framework */; };
 		DAE6EC3A1CA9599A00E077A0 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE6EC371CA9599A00E077A0 /* ParseUI.framework */; };
@@ -38,11 +45,18 @@
 /* Begin PBXFileReference section */
 		26D5F8DBB6D36516770D8B1A /* Pods_joynem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_joynem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F2E17706C9A76A05039C576 /* Pods-joynem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joynem.release.xcconfig"; path = "Pods/Target Support Files/Pods-joynem/Pods-joynem.release.xcconfig"; sourceTree = "<group>"; };
+		DA1341A41CAD1A1C00CC6356 /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
+		DA1341A61CAD1C5000CC6356 /* WelcomeSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeSceneViewController.swift; sourceTree = "<group>"; };
+		DA1341A91CAD1F6000CC6356 /* GroupTypeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTypeSelectViewController.swift; sourceTree = "<group>"; };
+		DA1341AB1CAD1F9300CC6356 /* CountrySelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountrySelectViewController.swift; sourceTree = "<group>"; };
+		DA1341AD1CAD207C00CC6356 /* ProfileDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDescriptionViewController.swift; sourceTree = "<group>"; };
+		DA1341AF1CAD20EE00CC6356 /* FriendSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchViewController.swift; sourceTree = "<group>"; };
+		DA1341B11CAD225200CC6356 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		DA1341B51CAD23CE00CC6356 /* SwipesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipesViewController.swift; sourceTree = "<group>"; };
 		DAE6EC271CA87A3200E077A0 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		DAE6EC291CA90BE900E077A0 /* joynemLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = joynemLibrary.swift; sourceTree = "<group>"; };
 		DAE6EC2F1CA9593F00E077A0 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		DAE6EC311CA9597F00E077A0 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		DAE6EC331CA9598700E077A0 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		DAE6EC351CA9599A00E077A0 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		DAE6EC361CA9599A00E077A0 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
 		DAE6EC371CA9599A00E077A0 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
@@ -89,7 +103,6 @@
 				DAE6EC381CA9599A00E077A0 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				DAE6EC391CA9599A00E077A0 /* ParseTwitterUtils.framework in Frameworks */,
 				DAE6EC321CA9597F00E077A0 /* Parse.framework in Frameworks */,
-				DAE6EC341CA9598700E077A0 /* ParseFacebookUtils.framework in Frameworks */,
 				DAE6EC3A1CA9599A00E077A0 /* ParseUI.framework in Frameworks */,
 				DAE7D0F81CA70E8500151279 /* FBSDKCoreKit.framework in Frameworks */,
 				576656C2336D6BADA4853EAC /* Pods_joynem.framework in Frameworks */,
@@ -114,6 +127,23 @@
 				26D5F8DBB6D36516770D8B1A /* Pods_joynem.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA1341A81CAD1F2700CC6356 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAE7D0FD1CA7FFDB00151279 /* ViewController.swift */,
+				DAE6EC271CA87A3200E077A0 /* SignUpController.swift */,
+				DA1341A41CAD1A1C00CC6356 /* ProfilePictureViewController.swift */,
+				DA1341A61CAD1C5000CC6356 /* WelcomeSceneViewController.swift */,
+				DA1341A91CAD1F6000CC6356 /* GroupTypeSelectViewController.swift */,
+				DA1341AB1CAD1F9300CC6356 /* CountrySelectViewController.swift */,
+				DA1341AD1CAD207C00CC6356 /* ProfileDescriptionViewController.swift */,
+				DA1341AF1CAD20EE00CC6356 /* FriendSearchViewController.swift */,
+				DA1341B11CAD225200CC6356 /* UserProfileViewController.swift */,
+				DA1341B51CAD23CE00CC6356 /* SwipesViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 		DAE7D0D21CA5B7CD00151279 = {
@@ -141,10 +171,9 @@
 			children = (
 				DAE7D0F11CA5E2BD00151279 /* Frameworks */,
 				DAE7D0DE1CA5B7CE00151279 /* AppDelegate.swift */,
-				DAE6EC291CA90BE900E077A0 /* joynemLibrary.swift */,
-				DAE7D0FD1CA7FFDB00151279 /* ViewController.swift */,
-				DAE6EC271CA87A3200E077A0 /* SignUpController.swift */,
+				DA1341A81CAD1F2700CC6356 /* View Controllers */,
 				DAE7D0E21CA5B7CE00151279 /* Main.storyboard */,
+				DAE6EC291CA90BE900E077A0 /* joynemLibrary.swift */,
 				DAE7D0E51CA5B7CE00151279 /* Assets.xcassets */,
 				DAE7D0E71CA5B7CE00151279 /* LaunchScreen.storyboard */,
 				DAE7D0EA1CA5B7CE00151279 /* Info.plist */,
@@ -167,7 +196,6 @@
 				DAE6EC351CA9599A00E077A0 /* ParseFacebookUtilsV4.framework */,
 				DAE6EC361CA9599A00E077A0 /* ParseTwitterUtils.framework */,
 				DAE6EC371CA9599A00E077A0 /* ParseUI.framework */,
-				DAE6EC331CA9598700E077A0 /* ParseFacebookUtils.framework */,
 				DAE6EC311CA9597F00E077A0 /* Parse.framework */,
 				DAE6EC2F1CA9593F00E077A0 /* Bolts.framework */,
 				DAE7D0F91CA70E9500151279 /* FBSDKLoginKit.framework */,
@@ -299,10 +327,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1341AE1CAD207C00CC6356 /* ProfileDescriptionViewController.swift in Sources */,
 				DAE7D0FE1CA7FFDB00151279 /* ViewController.swift in Sources */,
+				DA1341A51CAD1A1C00CC6356 /* ProfilePictureViewController.swift in Sources */,
 				DAE6EC2A1CA90BE900E077A0 /* joynemLibrary.swift in Sources */,
 				DAE7D0DF1CA5B7CE00151279 /* AppDelegate.swift in Sources */,
+				DA1341AA1CAD1F6000CC6356 /* GroupTypeSelectViewController.swift in Sources */,
+				DA1341B01CAD20EE00CC6356 /* FriendSearchViewController.swift in Sources */,
+				DA1341AC1CAD1F9300CC6356 /* CountrySelectViewController.swift in Sources */,
+				DA1341A71CAD1C5000CC6356 /* WelcomeSceneViewController.swift in Sources */,
+				DA1341B21CAD225200CC6356 /* UserProfileViewController.swift in Sources */,
 				DAE6EC281CA87A3200E077A0 /* SignUpController.swift in Sources */,
+				DA1341B61CAD23CE00CC6356 /* SwipesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
