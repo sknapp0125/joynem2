@@ -21,6 +21,16 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     @IBOutlet var password: UITextField!
     @IBOutlet var confirmPassword: UITextField!
     
+    @IBOutlet var BDayPicker: UIDatePicker!
+    
+    @IBOutlet var BDayTextField: UITextField!
+    
+    @IBOutlet var maleButton: DownStateButton?
+    
+    @IBOutlet var femaleButton: DownStateButton?
+    
+    let dateFormat: NSDateFormatter = NSDateFormatter()
+    var clickCounter = 0
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -88,14 +98,59 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //Disables Bday textfield
+        BDayTextField.delegate = self
+        BDayTextField.inputView = BDayPicker
+        
+        //Hides date picker
+        BDayPicker.hidden = true
+        BDayPicker.datePickerMode = UIDatePickerMode.Date
+        BDayPicker.addTarget(self, action: #selector(SignUpController.updateBdayTextField(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        
+        //Setup the date format
+        dateFormat.dateStyle = NSDateFormatterStyle.ShortStyle
+        
+        //Setup Radio Buttons
+        maleButton?.downStateImage = "radioBtnYes.png"
+        maleButton?.myAltBtn = [femaleButton!]
+        
+        femaleButton?.downStateImage = "radioBtnYes.png"
+        femaleButton?.myAltBtn = [maleButton!]
+
+        
         //Attach text fields to UITextFieldDelegate for hiding the keyboard
-        self.username.delegate = self
-        self.password.delegate = self
-        self.firstName.delegate = self
-        self.lastName.delegate = self
-        self.email.delegate = self
-        self.confirmPassword.delegate = self
+//        self.username.delegate = self
+//        self.password.delegate = self
+//        self.firstName.delegate = self
+//        self.lastName.delegate = self
+//        self.email.delegate = self
+//        self.confirmPassword.delegate = self
     }
+    
+    func updateBdayTextField(sender: UIDatePicker){
+        BDayTextField.text = dateFormat.stringFromDate(sender.date)
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        _ = (BDayTextField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
+        
+        return false
+    }
+    
+    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        
+        BDayPicker.hidden = false
+        if(clickCounter == 0){
+            clickCounter += 1
+        }
+        else{
+            BDayPicker.hidden = true
+            clickCounter = 0
+        }
+        return false
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -104,14 +159,14 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     
     
     //HIDE KEYBOARD
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
+//    
+//    func textFieldShouldReturn(textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
     
     
     /*

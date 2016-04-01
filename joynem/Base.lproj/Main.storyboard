@@ -219,7 +219,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJJ-Oa-hap">
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJJ-Oa-hap" userLabel="Country PickerView">
                                         <rect key="frame" x="100" y="60" width="320" height="90"/>
                                     </pickerView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select a State or Province" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yq4-fM-vz2">
@@ -227,7 +227,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <pickerView contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ata-Oj-DUi">
+                                    <pickerView contentMode="scaleToFill" horizontalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="ata-Oj-DUi" userLabel="State PickerVIew">
                                         <rect key="frame" x="100" y="180" width="320" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="ZHE-8j-Z2m"/>
@@ -238,7 +238,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIQ-Tc-Yig">
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIQ-Tc-Yig" userLabel="City PickerView">
                                         <rect key="frame" x="100" y="300" width="320" height="90"/>
                                     </pickerView>
                                 </subviews>
@@ -269,6 +269,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="cityPicker" destination="NIQ-Tc-Yig" id="HIQ-1Y-sa9"/>
+                        <outlet property="cityText" destination="dIa-H6-xhK" id="4Jj-ig-cca"/>
+                        <outlet property="countryPicker" destination="IJJ-Oa-hap" id="FT7-vH-piu"/>
+                        <outlet property="countryText" destination="a0o-vE-oFd" id="1ba-1N-JS6"/>
+                        <outlet property="statePicker" destination="ata-Oj-DUi" id="lzk-WR-SQb"/>
+                        <outlet property="stateText" destination="Yq4-fM-vz2" id="P15-EJ-why"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="877-7T-hgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -761,7 +769,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="0Ib-wC-KsR"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                     </textField>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LqR-mD-2OC">
                                                         <rect key="frame" x="239" y="0.0" width="241" height="30"/>
@@ -769,7 +777,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="2KO-cB-rNI"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -796,17 +804,17 @@
                                                     <constraint firstAttribute="height" constant="30" id="LJG-Kg-5hx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="ZYy-Fj-M5Z" firstAttribute="width" secondItem="pfC-w4-UaF" secondAttribute="width" id="Iw1-ak-MrQ"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xGx-no-kLi">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xGx-no-kLi">
                                         <rect key="frame" x="20" y="160" width="480" height="60"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIJ-Zk-2Oe">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pIJ-Zk-2Oe">
                                                 <rect key="frame" x="222" y="0.0" width="37" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Dxi-7a-eGW"/>
@@ -815,13 +823,13 @@
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@email.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d7a-n1-IU1">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="example@email.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d7a-n1-IU1">
                                                 <rect key="frame" x="0.0" y="30" width="480" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="5GG-WX-n00"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -846,7 +854,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="LrY-2e-xly"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fY-z6-scY">
                                                 <rect key="frame" x="0.0" y="60" width="480" height="30"/>
@@ -854,7 +862,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="OBq-IG-B0b"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -968,10 +976,14 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="BDayPicker" destination="BFT-xc-43x" id="YuJ-Pu-XJB"/>
+                        <outlet property="BDayTextField" destination="nGH-Zv-iAf" id="bNA-YH-6Ec"/>
                         <outlet property="confirmPassword" destination="8fY-z6-scY" id="Poq-xV-JTh"/>
                         <outlet property="email" destination="ZYy-Fj-M5Z" id="32V-hM-2c5"/>
+                        <outlet property="femaleButton" destination="6tr-cV-YIx" id="BeG-d8-296"/>
                         <outlet property="firstName" destination="6L4-vM-f7L" id="0Iq-OS-bYR"/>
                         <outlet property="lastName" destination="LqR-mD-2OC" id="sGO-ue-dWb"/>
+                        <outlet property="maleButton" destination="ymY-X8-LKy" id="y0p-7m-ifg"/>
                         <outlet property="password" destination="raa-v8-ShJ" id="nFo-f6-C8n"/>
                         <outlet property="username" destination="ZYy-Fj-M5Z" id="jTh-l4-T4H"/>
                     </connections>
