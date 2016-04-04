@@ -21,16 +21,19 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     @IBOutlet var password: UITextField!
     @IBOutlet var confirmPassword: UITextField!
     
+    
     @IBOutlet var BDayPicker: UIDatePicker!
+    @IBOutlet var BDayText: UITextField!
+    @IBAction func BDayAction(sender: AnyObject) {
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM.dd.yyyy"
+        let strDate = dateFormatter.stringFromDate(BDayPicker.date)
+        self.BDayText.text = strDate
+    }
     
-    @IBOutlet var BDayTextField: UITextField!
     
-    @IBOutlet var maleButton: DownStateButton?
     
-    @IBOutlet var femaleButton: DownStateButton?
-    
-    let dateFormat: NSDateFormatter = NSDateFormatter()
-    var clickCounter = 0
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -60,6 +63,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
             view.addSubview(activityIndicator)
             activityIndicator.startAnimating()
+            
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
             var user = PFUser()
@@ -70,15 +74,22 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             user["lastName"] = lastName.text
             
             
+            
+            
             var errorMessage = "Please try again later"
             
             user.signUpInBackgroundWithBlock({ (success, error) -> Void in
                 self.activityIndicator.stopAnimating()
+                
                 UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
                 if error == nil {
                     
                     //Sign Up Successful
+                    print((user.username)!)
+                    print((user.email)!)
+                    
+                    
                 } else {
                     
                     if let errorString = error!.userInfo["error"] as? String {
@@ -98,59 +109,14 @@ class SignUpController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //Disables Bday textfield
-        BDayTextField.delegate = self
-        BDayTextField.inputView = BDayPicker
-        
-        //Hides date picker
-        BDayPicker.hidden = true
-        BDayPicker.datePickerMode = UIDatePickerMode.Date
-        BDayPicker.addTarget(self, action: #selector(SignUpController.updateBdayTextField(_:)), forControlEvents: UIControlEvents.ValueChanged)
-        
-        //Setup the date format
-        dateFormat.dateStyle = NSDateFormatterStyle.ShortStyle
-        
-        //Setup Radio Buttons
-        maleButton?.downStateImage = "radioBtnYes.png"
-        maleButton?.myAltBtn = [femaleButton!]
-        
-        femaleButton?.downStateImage = "radioBtnYes.png"
-        femaleButton?.myAltBtn = [maleButton!]
-
-        
         //Attach text fields to UITextFieldDelegate for hiding the keyboard
-//        self.username.delegate = self
-//        self.password.delegate = self
-//        self.firstName.delegate = self
-//        self.lastName.delegate = self
-//        self.email.delegate = self
-//        self.confirmPassword.delegate = self
+        self.username.delegate = self
+        self.password.delegate = self
+        self.firstName.delegate = self
+        self.lastName.delegate = self
+        self.email.delegate = self
+        self.confirmPassword.delegate = self
     }
-    
-    func updateBdayTextField(sender: UIDatePicker){
-        BDayTextField.text = dateFormat.stringFromDate(sender.date)
-    }
-    
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        
-        _ = (BDayTextField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
-        
-        return false
-    }
-    
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        
-        BDayPicker.hidden = false
-        if(clickCounter == 0){
-            clickCounter += 1
-        }
-        else{
-            BDayPicker.hidden = true
-            clickCounter = 0
-        }
-        return false
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -159,14 +125,14 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     
     
     //HIDE KEYBOARD
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        self.view.endEditing(true)
-//    }
-//    
-//    func textFieldShouldReturn(textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return true
-//    }
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     
     /*

@@ -29,6 +29,7 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
@@ -81,11 +82,15 @@
                                     <action selector="profileImageBtn:" destination="Mmo-YF-85Y" eventType="touchUpInside" id="DXu-U7-k4V"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAn-AI-fsh">
-                                <rect key="frame" x="277" y="449" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhZ-jH-hTJ">
+                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.69803921570000005" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="3Wx-Wi-88v" kind="presentation" id="wDT-A2-hqI"/>
+                                    <segue destination="3Wx-Wi-88v" kind="presentation" id="f6p-x7-MDy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -311,6 +316,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYL-7e-uyM">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="allTypesPressed:" destination="nBF-Xr-xTT" eventType="valueChanged" id="kWd-PC-Tu5"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All types" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wh2-Xi-PQh">
                                                 <rect key="frame" x="49" y="0.0" width="358" height="22"/>
@@ -328,6 +336,9 @@
                                                 <subviews>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ory-hC-2Ih">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="couplesPressed:" destination="nBF-Xr-xTT" eventType="valueChanged" id="ce1-hJ-0jL"/>
+                                                        </connections>
                                                     </switch>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Couples" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZj-gI-wJB">
                                                         <rect key="frame" x="49" y="0.0" width="358" height="22"/>
@@ -344,6 +355,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNS-qv-c2p">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="singlesPressed:" destination="nBF-Xr-xTT" eventType="valueChanged" id="OXY-tP-z67"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjM-gZ-ySJ">
                                                 <rect key="frame" x="49" y="0.0" width="358" height="31"/>
@@ -358,6 +372,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a52-0I-nYW">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="familiesPressed:" destination="nBF-Xr-xTT" eventType="valueChanged" id="o7U-N2-0gL"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Families" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf9-90-1Mx">
                                                 <rect key="frame" x="49" y="0.0" width="358" height="22"/>
@@ -372,6 +389,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VRZ-bL-Pu4">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="malesPressed:" destination="nBF-Xr-xTT" eventType="valueChanged" id="Bai-cw-xzQ"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Males" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOd-H3-VPt">
                                                 <rect key="frame" x="49" y="0.0" width="358" height="31"/>
@@ -386,6 +406,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iU8-Lw-2wK">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="femalesPressed:" destination="nBF-Xr-xTT" eventType="valueChanged" id="80m-ZO-Rrp"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Females" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KX-li-Vco">
                                                 <rect key="frame" x="49" y="0.0" width="358" height="22"/>
@@ -400,6 +423,9 @@
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bd-lR-eiD">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="LGBTPressed:" destination="nBF-Xr-xTT" eventType="valueChanged" id="XbW-g9-2Gx"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LGBT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBJ-bJ-1JS">
                                                 <rect key="frame" x="49" y="0.0" width="358" height="31"/>
@@ -446,6 +472,15 @@
                             <constraint firstItem="Y7L-7n-BQ8" firstAttribute="top" secondItem="d3t-wh-xyT" secondAttribute="bottom" constant="50" id="nzR-sY-qfa"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="LGBTSwitch" destination="0bd-lR-eiD" id="noo-HD-tPJ"/>
+                        <outlet property="allTypesSwitch" destination="OYL-7e-uyM" id="7un-bp-fx1"/>
+                        <outlet property="couplesSwitch" destination="Ory-hC-2Ih" id="g50-md-rNK"/>
+                        <outlet property="familiesSwitch" destination="a52-0I-nYW" id="jlV-zX-zgN"/>
+                        <outlet property="femalesSwitch" destination="iU8-Lw-2wK" id="caf-dX-DKr"/>
+                        <outlet property="malesSwitch" destination="VRZ-bL-Pu4" id="phR-xm-7RA"/>
+                        <outlet property="singlesSwitch" destination="aNS-qv-c2p" id="jqb-2j-urZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zu3-GW-Or3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -690,18 +725,6 @@
                     <view key="view" contentMode="scaleToFill" id="xWp-3b-DqK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1tH-qz-v6U" customClass="kolodaView" customModule="Koloda">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-A9-3pb">
-                                <rect key="frame" x="255" y="59" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -829,7 +852,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="5GG-WX-n00"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -944,6 +967,9 @@
                                         <date key="minimumDate" timeIntervalSinceReferenceDate="-3155720400">
                                             <!--1901-01-01 11:00:00 +0000-->
                                         </date>
+                                        <connections>
+                                            <action selector="BDayAction:" destination="PFf-Ko-cpY" eventType="valueChanged" id="cOz-3l-d4I"/>
+                                        </connections>
                                     </datePicker>
                                 </subviews>
                                 <constraints>
@@ -976,16 +1002,14 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="BDayPicker" destination="BFT-xc-43x" id="YuJ-Pu-XJB"/>
-                        <outlet property="BDayTextField" destination="nGH-Zv-iAf" id="bNA-YH-6Ec"/>
+                        <outlet property="BDayPicker" destination="BFT-xc-43x" id="urE-VA-FV8"/>
+                        <outlet property="BDayText" destination="nGH-Zv-iAf" id="Io6-1x-ypm"/>
                         <outlet property="confirmPassword" destination="8fY-z6-scY" id="Poq-xV-JTh"/>
-                        <outlet property="email" destination="ZYy-Fj-M5Z" id="32V-hM-2c5"/>
-                        <outlet property="femaleButton" destination="6tr-cV-YIx" id="BeG-d8-296"/>
+                        <outlet property="email" destination="d7a-n1-IU1" id="BRQ-Ub-4jB"/>
                         <outlet property="firstName" destination="6L4-vM-f7L" id="0Iq-OS-bYR"/>
                         <outlet property="lastName" destination="LqR-mD-2OC" id="sGO-ue-dWb"/>
-                        <outlet property="maleButton" destination="ymY-X8-LKy" id="y0p-7m-ifg"/>
                         <outlet property="password" destination="raa-v8-ShJ" id="nFo-f6-C8n"/>
-                        <outlet property="username" destination="ZYy-Fj-M5Z" id="jTh-l4-T4H"/>
+                        <outlet property="username" destination="ZYy-Fj-M5Z" id="CMw-WF-hrc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyo-OG-KIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1013,12 +1037,12 @@
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kgo-Ew-juG">
                                         <rect key="frame" x="20" y="339" width="480" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5v6-7F-8Tc">
                                         <rect key="frame" x="20" y="379" width="480" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNQ-pD-iKg">
                                         <rect key="frame" x="20" y="419" width="480" height="33"/>
