@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		576656C2336D6BADA4853EAC /* Pods_joynem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D5F8DBB6D36516770D8B1A /* Pods_joynem.framework */; };
+		DA129BD61CB357EA00C7FD53 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA129BD51CB357EA00C7FD53 /* UserTableViewController.swift */; };
 		DA1341A51CAD1A1C00CC6356 /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A41CAD1A1C00CC6356 /* ProfilePictureViewController.swift */; };
 		DA1341A71CAD1C5000CC6356 /* WelcomeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A61CAD1C5000CC6356 /* WelcomeSceneViewController.swift */; };
 		DA1341AA1CAD1F6000CC6356 /* GroupTypeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A91CAD1F6000CC6356 /* GroupTypeSelectViewController.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		26D5F8DBB6D36516770D8B1A /* Pods_joynem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_joynem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F2E17706C9A76A05039C576 /* Pods-joynem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joynem.release.xcconfig"; path = "Pods/Target Support Files/Pods-joynem/Pods-joynem.release.xcconfig"; sourceTree = "<group>"; };
+		DA129BD51CB357EA00C7FD53 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		DA1341A41CAD1A1C00CC6356 /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
 		DA1341A61CAD1C5000CC6356 /* WelcomeSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeSceneViewController.swift; sourceTree = "<group>"; };
 		DA1341A91CAD1F6000CC6356 /* GroupTypeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTypeSelectViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				DAE7D0FD1CA7FFDB00151279 /* ViewController.swift */,
+				DA129BD51CB357EA00C7FD53 /* UserTableViewController.swift */,
 				DAE6EC271CA87A3200E077A0 /* SignUpController.swift */,
 				DA1341A41CAD1A1C00CC6356 /* ProfilePictureViewController.swift */,
 				DA1341A61CAD1C5000CC6356 /* WelcomeSceneViewController.swift */,
@@ -329,6 +332,7 @@
 			files = (
 				DA1341AE1CAD207C00CC6356 /* ProfileDescriptionViewController.swift in Sources */,
 				DAE7D0FE1CA7FFDB00151279 /* ViewController.swift in Sources */,
+				DA129BD61CB357EA00C7FD53 /* UserTableViewController.swift in Sources */,
 				DA1341A51CAD1A1C00CC6356 /* ProfilePictureViewController.swift in Sources */,
 				DAE6EC2A1CA90BE900E077A0 /* joynemLibrary.swift in Sources */,
 				DAE7D0DF1CA5B7CE00151279 /* AppDelegate.swift in Sources */,

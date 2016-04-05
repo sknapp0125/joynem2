@@ -714,6 +714,51 @@
             </objects>
             <point key="canvasLocation" x="5554" y="1164"/>
         </scene>
+        <!--User List-->
+        <scene sceneID="xGX-5x-CAc">
+            <objects>
+                <tableViewController id="58i-6f-xCI" customClass="UserTableViewController" customModule="joynem" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zIv-qT-uiF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" id="Wrg-y5-XJk">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wrg-y5-XJk" id="2i2-ib-yOR">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="58i-6f-xCI" id="FjH-aB-Jwy"/>
+                            <outlet property="delegate" destination="58i-6f-xCI" id="tN5-4d-S6p"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="User List" id="pKJ-Do-kOu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Au1-Kf-MkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1337" y="-295"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hHO-0M-UVa">
+            <objects>
+                <navigationController id="WmO-0p-Zs9" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W14-jO-XgX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="58i-6f-xCI" kind="relationship" relationship="rootViewController" id="2l3-ZA-JNc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npt-dR-vU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="517" y="-295"/>
+        </scene>
         <!--Swipes-->
         <scene sceneID="dyu-0E-Hzo">
             <objects>
@@ -1055,7 +1100,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="FPc-Hb-ODz" kind="presentation" id="C0e-Kp-l1D"/>
+                                            <segue destination="WmO-0p-Zs9" kind="show" identifier="login" id="axC-IZ-A65"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIn-Cc-D7t">
@@ -1071,9 +1116,6 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="FPc-Hb-ODz" kind="presentation" id="iMd-ce-vlz"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ai0-nx-YFf">
                                         <rect key="frame" x="20" y="527" width="480" height="33"/>
@@ -1131,7 +1173,4 @@
         <image name="image53" width="59" height="59"/>
         <image name="radioBtnNo" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="iMd-ce-vlz"/>
-    </inferredMetricsTieBreakers>
 </document>

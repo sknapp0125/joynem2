@@ -66,6 +66,9 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
                     
                     print((user!.email)!)
                     
+                    self.performSegueWithIdentifier("login", sender: self)
+                    
+                    
                 } else {
                     
                     if let errorString = error!.userInfo["error"] as? String {
@@ -147,6 +150,13 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
         func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if PFUser.currentUser() != nil {
+            
+            self.performSegueWithIdentifier("login", sender: self)
         }
     }
     
