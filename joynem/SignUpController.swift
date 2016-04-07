@@ -39,7 +39,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
     
     func displayAlert(title: String, message: String) {
         
-        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             
             self.dismissViewControllerAnimated(true, completion: nil)
@@ -66,7 +66,7 @@ class SignUpController: UIViewController, UITextFieldDelegate {
             
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
-            var user = PFUser()
+            let user = PFUser()
             user.username = username.text
             user.password = password.text
             user.email = email.text

@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		576656C2336D6BADA4853EAC /* Pods_joynem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D5F8DBB6D36516770D8B1A /* Pods_joynem.framework */; };
+		DA0EE3EE1CB5B31700A0F071 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0EE3ED1CB5B31700A0F071 /* FBSDKCoreKit.framework */; };
+		DA0EE3F01CB5B32B00A0F071 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0EE3EF1CB5B32B00A0F071 /* FBSDKLoginKit.framework */; };
+		DA0EE3F21CB5B35E00A0F071 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0EE3F11CB5B35E00A0F071 /* FBSDKShareKit.framework */; };
 		DA129BD61CB357EA00C7FD53 /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA129BD51CB357EA00C7FD53 /* UserTableViewController.swift */; };
+		DA129BD81CB3D00800C7FD53 /* EventImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA129BD71CB3D00800C7FD53 /* EventImageViewController.swift */; };
 		DA1341A51CAD1A1C00CC6356 /* ProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A41CAD1A1C00CC6356 /* ProfilePictureViewController.swift */; };
 		DA1341A71CAD1C5000CC6356 /* WelcomeSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A61CAD1C5000CC6356 /* WelcomeSceneViewController.swift */; };
 		DA1341AA1CAD1F6000CC6356 /* GroupTypeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1341A91CAD1F6000CC6356 /* GroupTypeSelectViewController.swift */; };
@@ -38,15 +42,17 @@
 		DAE7D0E41CA5B7CE00151279 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D0E21CA5B7CE00151279 /* Main.storyboard */; };
 		DAE7D0E61CA5B7CE00151279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D0E51CA5B7CE00151279 /* Assets.xcassets */; };
 		DAE7D0E91CA5B7CE00151279 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE7D0E71CA5B7CE00151279 /* LaunchScreen.storyboard */; };
-		DAE7D0F81CA70E8500151279 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE7D0F71CA70E8500151279 /* FBSDKCoreKit.framework */; };
-		DAE7D0FA1CA70E9500151279 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE7D0F91CA70E9500151279 /* FBSDKLoginKit.framework */; };
 		DAE7D0FE1CA7FFDB00151279 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE7D0FD1CA7FFDB00151279 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		26D5F8DBB6D36516770D8B1A /* Pods_joynem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_joynem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F2E17706C9A76A05039C576 /* Pods-joynem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joynem.release.xcconfig"; path = "Pods/Target Support Files/Pods-joynem/Pods-joynem.release.xcconfig"; sourceTree = "<group>"; };
+		DA0EE3ED1CB5B31700A0F071 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DA0EE3EF1CB5B32B00A0F071 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		DA0EE3F11CB5B35E00A0F071 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		DA129BD51CB357EA00C7FD53 /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
+		DA129BD71CB3D00800C7FD53 /* EventImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventImageViewController.swift; sourceTree = "<group>"; };
 		DA1341A41CAD1A1C00CC6356 /* ProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePictureViewController.swift; sourceTree = "<group>"; };
 		DA1341A61CAD1C5000CC6356 /* WelcomeSceneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeSceneViewController.swift; sourceTree = "<group>"; };
 		DA1341A91CAD1F6000CC6356 /* GroupTypeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTypeSelectViewController.swift; sourceTree = "<group>"; };
@@ -79,8 +85,6 @@
 		DAE7D0E81CA5B7CE00151279 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DAE7D0EA1CA5B7CE00151279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAE7D0F61CA70AC500151279 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		DAE7D0F71CA70E8500151279 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		DAE7D0F91CA70E9500151279 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		DAE7D0FD1CA7FFDB00151279 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBC7A8C0D9635D57ED0C0A50 /* Pods-joynem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-joynem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-joynem/Pods-joynem.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +96,8 @@
 			files = (
 				DAE6EC4E1CA95A9100E077A0 /* libsqlite3.0.tbd in Frameworks */,
 				DAE6EC4C1CA95A6000E077A0 /* libz.tbd in Frameworks */,
+				DA0EE3F01CB5B32B00A0F071 /* FBSDKLoginKit.framework in Frameworks */,
+				DA0EE3EE1CB5B31700A0F071 /* FBSDKCoreKit.framework in Frameworks */,
 				DAE6EC4A1CA95A4700E077A0 /* SystemConfiguration.framework in Frameworks */,
 				DAE6EC481CA95A4000E077A0 /* StoreKit.framework in Frameworks */,
 				DAE6EC461CA95A3300E077A0 /* Security.framework in Frameworks */,
@@ -100,13 +106,12 @@
 				DAE6EC401CA95A0400E077A0 /* CoreGraphics.framework in Frameworks */,
 				DAE6EC3E1CA959F800E077A0 /* CFNetwork.framework in Frameworks */,
 				DAE6EC3C1CA959ED00E077A0 /* AudioToolbox.framework in Frameworks */,
+				DA0EE3F21CB5B35E00A0F071 /* FBSDKShareKit.framework in Frameworks */,
 				DAE6EC301CA9593F00E077A0 /* Bolts.framework in Frameworks */,
-				DAE7D0FA1CA70E9500151279 /* FBSDKLoginKit.framework in Frameworks */,
 				DAE6EC381CA9599A00E077A0 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				DAE6EC391CA9599A00E077A0 /* ParseTwitterUtils.framework in Frameworks */,
 				DAE6EC321CA9597F00E077A0 /* Parse.framework in Frameworks */,
 				DAE6EC3A1CA9599A00E077A0 /* ParseUI.framework in Frameworks */,
-				DAE7D0F81CA70E8500151279 /* FBSDKCoreKit.framework in Frameworks */,
 				576656C2336D6BADA4853EAC /* Pods_joynem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,6 +150,7 @@
 				DA1341AF1CAD20EE00CC6356 /* FriendSearchViewController.swift */,
 				DA1341B11CAD225200CC6356 /* UserProfileViewController.swift */,
 				DA1341B51CAD23CE00CC6356 /* SwipesViewController.swift */,
+				DA129BD71CB3D00800C7FD53 /* EventImageViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -188,6 +194,9 @@
 		DAE7D0F11CA5E2BD00151279 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA0EE3F11CB5B35E00A0F071 /* FBSDKShareKit.framework */,
+				DA0EE3EF1CB5B32B00A0F071 /* FBSDKLoginKit.framework */,
+				DA0EE3ED1CB5B31700A0F071 /* FBSDKCoreKit.framework */,
 				DAE6EC431CA95A2500E077A0 /* QuartzCore.framework */,
 				DAE6EC451CA95A3300E077A0 /* Security.framework */,
 				DAE6EC3B1CA959ED00E077A0 /* AudioToolbox.framework */,
@@ -201,8 +210,6 @@
 				DAE6EC371CA9599A00E077A0 /* ParseUI.framework */,
 				DAE6EC311CA9597F00E077A0 /* Parse.framework */,
 				DAE6EC2F1CA9593F00E077A0 /* Bolts.framework */,
-				DAE7D0F91CA70E9500151279 /* FBSDKLoginKit.framework */,
-				DAE7D0F71CA70E8500151279 /* FBSDKCoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -335,6 +342,7 @@
 				DA129BD61CB357EA00C7FD53 /* UserTableViewController.swift in Sources */,
 				DA1341A51CAD1A1C00CC6356 /* ProfilePictureViewController.swift in Sources */,
 				DAE6EC2A1CA90BE900E077A0 /* joynemLibrary.swift in Sources */,
+				DA129BD81CB3D00800C7FD53 /* EventImageViewController.swift in Sources */,
 				DAE7D0DF1CA5B7CE00151279 /* AppDelegate.swift in Sources */,
 				DA1341AA1CAD1F6000CC6356 /* GroupTypeSelectViewController.swift in Sources */,
 				DA1341B01CAD20EE00CC6356 /* FriendSearchViewController.swift in Sources */,
@@ -459,8 +467,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
-					/Users/stefaniemknapp/Documents/FacebookSDK,
 					"$(PROJECT_DIR)/joynem",
+					/Users/stefaniemknapp/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = joynem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -479,8 +487,8 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
-					/Users/stefaniemknapp/Documents/FacebookSDK,
 					"$(PROJECT_DIR)/joynem",
+					/Users/stefaniemknapp/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = joynem/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

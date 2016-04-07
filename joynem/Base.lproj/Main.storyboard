@@ -30,6 +30,8 @@
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
+            <string>HelveticaNeue-Bold</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
             <string>HelveticaNeue</string>
@@ -737,11 +739,87 @@
                             <outlet property="delegate" destination="58i-6f-xCI" id="tN5-4d-S6p"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="User List" id="pKJ-Do-kOu"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Au1-Kf-MkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1337" y="-295"/>
+        </scene>
+        <!--Event Image-->
+        <scene sceneID="4nl-XQ-3EM">
+            <objects>
+                <viewController title="Event Image" id="dQV-7c-3rd" customClass="EventImageViewController" customModule="joynem" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Sd-U3-3El"/>
+                        <viewControllerLayoutGuide type="bottom" id="uz2-KU-GHt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="phQ-t5-1Cj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="i1a-Vp-f2S">
+                                <rect key="frame" x="167" y="75" width="267" height="282"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="Is4-hY-gwA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEk-b9-AdY">
+                                <rect key="frame" x="208" y="395" width="184" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="YOa-UE-sL5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Choose an Image">
+                                    <color key="titleColor" red="0.25694610680000002" green="0.69803921570000005" blue="0.50017617800000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseImage:" destination="dQV-7c-3rd" eventType="touchUpInside" id="OS8-i6-js7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ma4-T1-kyp">
+                                <rect key="frame" x="20" y="459" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sm9-yI-DuK">
+                                <rect key="frame" x="0.0" y="564" width="600" height="34"/>
+                                <color key="backgroundColor" red="0.27058823529999998" green="0.69803921570000005" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="xu6-VK-iU4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Post Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postImage:" destination="dQV-7c-3rd" eventType="touchUpInside" id="Ffl-8M-fWo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GEk-b9-AdY" firstAttribute="top" secondItem="i1a-Vp-f2S" secondAttribute="bottom" constant="38" id="1Pm-Br-KeH"/>
+                            <constraint firstItem="ma4-T1-kyp" firstAttribute="top" secondItem="GEk-b9-AdY" secondAttribute="bottom" constant="30" id="FbW-ad-BdU"/>
+                            <constraint firstItem="GEk-b9-AdY" firstAttribute="centerX" secondItem="phQ-t5-1Cj" secondAttribute="centerX" id="T8h-rk-GBC"/>
+                            <constraint firstItem="uz2-KU-GHt" firstAttribute="top" secondItem="i1a-Vp-f2S" secondAttribute="bottom" constant="243" id="kZs-8Z-DPT"/>
+                            <constraint firstItem="ma4-T1-kyp" firstAttribute="leading" secondItem="phQ-t5-1Cj" secondAttribute="leadingMargin" id="m5b-Ck-uhd"/>
+                            <constraint firstItem="sm9-yI-DuK" firstAttribute="top" secondItem="ma4-T1-kyp" secondAttribute="bottom" constant="75" id="oLn-NO-ves"/>
+                            <constraint firstItem="ma4-T1-kyp" firstAttribute="trailing" secondItem="phQ-t5-1Cj" secondAttribute="trailingMargin" id="tZQ-DP-IqQ"/>
+                            <constraint firstItem="i1a-Vp-f2S" firstAttribute="centerX" secondItem="phQ-t5-1Cj" secondAttribute="centerX" id="uMY-6p-zA4"/>
+                            <constraint firstItem="i1a-Vp-f2S" firstAttribute="top" secondItem="5Sd-U3-3El" secondAttribute="bottom" constant="55" id="xno-rG-xdM"/>
+                            <constraint firstItem="sm9-yI-DuK" firstAttribute="centerX" secondItem="phQ-t5-1Cj" secondAttribute="centerX" id="y02-lb-qZF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eventImageToPost" destination="i1a-Vp-f2S" id="A6p-47-qKS"/>
+                        <outlet property="message" destination="ma4-T1-kyp" id="y7k-Xi-DDl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yJr-Co-tz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2060" y="-295"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hHO-0M-UVa">
@@ -1100,7 +1178,8 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="WmO-0p-Zs9" kind="show" identifier="login" id="axC-IZ-A65"/>
+                                            <action selector="login:" destination="46e-s4-i3Y" eventType="touchUpInside" id="k3E-Ij-pAR"/>
+                                            <segue destination="WmO-0p-Zs9" kind="show" identifier="login" id="JGA-DC-K7A"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="OR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIn-Cc-D7t">
@@ -1153,6 +1232,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="FacebookButton" destination="Mhm-zG-Q9r" id="4QQ-XA-b6Z"/>
                         <outlet property="loginButton" destination="sNQ-pD-iKg" id="iOt-um-rLc"/>
                         <outlet property="password" destination="5v6-7F-8Tc" id="cET-eB-or5"/>
                         <outlet property="signupButton" destination="Ai0-nx-YFf" id="Udc-ue-Tev"/>
@@ -1166,6 +1246,7 @@
     </scenes>
     <resources>
         <image name="LoginLogo" width="687" height="329"/>
+        <image name="image2" width="27" height="21"/>
         <image name="image361" width="584" height="390"/>
         <image name="image49" width="59" height="60"/>
         <image name="image51" width="59" height="59"/>

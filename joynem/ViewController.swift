@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
 
 class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
     
@@ -23,9 +24,10 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var errorMessage = "Please try again later"
     
+    //Display Alert
     func displayAlert(title: String, message: String) {
         
-        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             
             self.dismissViewControllerAnimated(true, completion: nil)
@@ -51,7 +53,7 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
             
-            var user = PFUser()
+            let user = PFUser()
             user.username = username.text
             user.password = password.text
             
@@ -81,9 +83,10 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
             })
         }
     }
+
     
     //Facebook Login
-    //@IBOutlet var FacebookButton: FBSDKLoginButton!
+    @IBOutlet var FacebookButton: FBSDKLoginButton!
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         print ("User logged in")
@@ -169,4 +172,5 @@ class ViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDel
         textField.resignFirstResponder()
         return true
     }
+    
 }
